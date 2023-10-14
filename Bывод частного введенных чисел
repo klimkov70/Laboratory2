@@ -1,0 +1,26 @@
+#include <iostream>
+#include <iomanip> // Для установки точности вывода
+
+using namespace std;
+
+int main() {
+    double number1, number2;
+
+    // Запрос пользователю ввести два числа
+    cout << "Введите первое число: ";
+    cin >> number1;
+    
+    cout << "Введите второе число: ";
+    cin >> number2;
+
+    if (number2 != 0) { // Проверка деления на ноль
+        double result = number1 / number2;
+
+        // Устанавливаем точность вывода до сотых
+        cout << "Результат: " << fixed << setprecision(2) << result << endl;
+    } else {
+        cout << "Ошибка: деление на ноль!" << endl;
+    }
+
+    return 0;
+}
